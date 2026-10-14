@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Exploring HTML forms</title>
+    </head>
+    <body>
+        <form action="action_page.php" method="POST">
+            <h1>Volunteer Form</h1>
+
+           
+            <div>
+                 <fieldset>
+                    <legend>My Info</legend>
+                    <label for="fname">first name:</label>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">last name:</label>
+                    <input type="text" id="lname" name="lname">
+                    <br>
+                    <label for="phone">phone:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    <br>
+                    <label for="email">email:</label>
+                    <input type="email" id="email" name="email">
+                    <br>
+                    <label for="Gender">Gender:</label><br>
+                    <input type="radio" id="html" name="Gender" value="Male">
+                    <label for="html">Male</label>
+                    <input type="radio" id="Gender2" name="Gender" value="Female">
+                    <label for="css">Female</label>
+                    <br>
+                    <label for="Age">Age:</label><br>
+                    <select id="Age" name="Age">
+                        
+                        <option value="under">under 18</option>
+                        <option value="over">over 18</option>
+                    </select>
+                </fieldset>
+            </div>
+
+           
+            <div>
+                <fieldset>
+                    <legend>My Availability</legend>
+                    <h2>Days Available:</h2>
+
+                    <input type="checkbox" id="Sunday" name="Sunday" value="Sunday">
+                    <label for="Sunday">Sunday</label><br>
+                    <input type="checkbox" id="Monday" name="Monday" value="Monday">
+                    <label for="Monday">Monday</label><br>
+                    <input type="checkbox" id="Tuesday" name="Tuesday" value="Tuesday">
+                    <label for="Tuesday">Tuesday</label><br>
+                    <input type="checkbox" id="Wednesday" name="Wednesday" value="Wednesday">
+                    <label for="Wednesdsay">Wednesday</label><br>
+                    <input type="checkbox" id="Thursday" name="Thursday" value="Thursday">
+                    <label for="Thursday">Thursday</label><br>
+                    <input type="checkbox" id="Friday" name="Friday" value="Friday">
+                    <label for="Friday">Friday</label><br>
+                    <input type="checkbox" id="Saturday" name="Saturday" value="Saturday">
+                    <label for="Saturday">Saturday</label><br>
+
+                    <h2>Comments</h2>
+
+                    <textarea name="comments" id="comments"></textarea>
+                    <br>
+                    <input type="submit" value="Submit Query">
+                </fieldset>
+            </div>
+
+            <input type="hidden" id="custId" name="custId" value="RamaHerbst">
+
+        </form>
+    </body>
+</html>
