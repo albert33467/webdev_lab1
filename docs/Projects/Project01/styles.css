@@ -1,8 +1,3 @@
-/* Links */
-a {
-  color: #0d748f;
-}
-
 /* Header & nav */
 .phead {
   background: #2e1047;
@@ -21,27 +16,6 @@ h1 {
   margin-bottom: 1rem;
 }
 
-.pnav a:hover,
-.pnav a[aria-current="page"] {
-  background: #2e1047;
-}
-
-.jlnk {
-  position: absolute;
-  left: -9999px;
-  top: 0;
-  padding: .5rem;
-  background: white;
-  color: #2e1047;
-}
-
-.btitle {
-  max-width: 66rem;
-  margin: 0 auto;
-  font-size: 1.6rem; 
-  font-weight: bold;
-}
-
 /* Body */
 body {
   margin: 0;
@@ -58,22 +32,8 @@ figcaption {
   margin-top: 0.6rem;
 }
 
-.pnav li { 
-  display: inline-block; 
-}
-
 h1, h2, h3 {
   color: #2e1047;
-}
-
-.pftr p {
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-.jlnk:focus { 
-  left: .5rem; 
-  z-index: 1; 
 }
 
 /* Container */
@@ -89,11 +49,6 @@ h1, h2, h3 {
   background: #4c1d95;
 }
 
-.btitle a { 
-  color: white; 
-  text-decoration: none; 
-}
-
 h3 {
   font-size: 1.15rem; 
   margin-top: 1.5rem;
@@ -104,31 +59,12 @@ a:hover {
   color: #094b5e;
 }
 
-.bhome {
-  margin-top: 2.25rem;
-  font-size: 0.95rem;
-}
-
-/* Footer */
-.pftr {
-  background: #2e1047;
-  color: white;
-  text-align: center;
-  padding: 1.25rem;
-  margin-top: 2.5rem;
-}
-
 .pnav ul {
   max-width: 66rem;
   margin: 0 auto;
   padding: 0.4rem 0.5rem;
   list-style: none;
   text-align: center;
-}
-
-/* TOC */
-.ltoc {
-  margin: 1.75rem 0;
 }
 
 figure { 
@@ -149,10 +85,6 @@ h2 {
   margin-bottom: 0.75rem;
 }
 
-.ltoc ul {
-  font-size: 0.95rem; 
-}
-
 .sidebar{
   position: relative;
   border: 1px solid #d97706;        
@@ -163,24 +95,35 @@ h2 {
   border-radius: 4px;
 }
 
-/* images */
-.figcontainer {
-  margin: 1.5rem 0;
-  max-width: 100%;
-}
+/* embedded video */
 
-.figcontainer img {
-  display: block;
+/* YouTube Video Embed Styling */
+.video {
+  position: relative;
   width: 100%;
-  height: auto;
-  border-radius: 6px; 
+  padding-bottom: 56.5%; /* Maintains a clean 16:9 widescreen aspect ratio */
+  height: 0;
+  margin: 1.75rem 0 0.5rem 0;
+  background: #2e1047;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.figcontainer figcaption {
-  margin-top: 0.5rem;
-  font-size: 0.875rem; 
-  line-height: 1.4;
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.vidcaption {
+  color: #5b4c65;
+  font-size: 0.85rem;
   font-style: italic;
-  color: #6b7280; 
-  text-align: center; 
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
 }
