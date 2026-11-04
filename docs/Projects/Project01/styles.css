@@ -1,4 +1,4 @@
-/* Header & nav */
+/* header & nav */
 .phead {
   background: #2e1047;
   color: white;
@@ -6,17 +6,12 @@
   text-align: center;
 }
 
-figure img {
-  max-width: 100%;
-  height: auto;
-}
-
 h1 {
   font-size: 2.25rem; 
   margin-bottom: 1rem;
 }
 
-/* Body */
+/* body */
 body {
   margin: 0;
   background: #f6f3f8;
@@ -26,17 +21,13 @@ body {
   line-height: 1.5;
 }
 
-figcaption {
-  color: #5b4c65;
-  font-size: 0.85rem; 
-  margin-top: 0.6rem;
-}
+
 
 h1, h2, h3 {
   color: #2e1047;
 }
 
-/* Container */
+/* container */
 .lcont {
   max-width: 66rem;
   margin: 1.5rem auto;
@@ -45,8 +36,39 @@ h1, h2, h3 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
 }
 
+/* nav bar */
 .pnav {
   background: #4c1d95;
+}
+.pnav {
+  background: #4c1d95;
+}
+
+.pnav ul {
+  max-width: 66rem;
+  margin: 0 auto;
+  padding: 0.4rem 0.5rem;
+  list-style: none;
+  text-align: center;
+}
+
+.pnav li { 
+  display: inline-block; 
+}
+
+.pnav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem; 
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+
+.pnav a:hover,
+.pnav a[aria-current="page"] {
+  background: #2e1047;
 }
 
 h3 {
@@ -67,10 +89,6 @@ a:hover {
   text-align: center;
 }
 
-figure { 
-  margin: 1.75rem 0; 
-}
-
 .pnav a {
   color: white;
   text-decoration: none;
@@ -85,6 +103,9 @@ h2 {
   margin-bottom: 0.75rem;
 }
 
+/*five styling additions*/
+
+/* Style1 - sidebar */
 .sidebar{
   position: relative;
   border: 1px solid #d97706;        
@@ -95,19 +116,17 @@ h2 {
   border-radius: 4px;
 }
 
-/* embedded video */
+/* Style2 - embedded video */
 
-/* YouTube Video Embed Styling */
 .video {
   position: relative;
   width: 100%;
-  padding-bottom: 56.5%; /* Maintains a clean 16:9 widescreen aspect ratio */
+  padding-bottom: 56.5%; 
   height: 0;
   margin: 1.75rem 0 0.5rem 0;
   background: #2e1047;
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .video iframe {
@@ -126,4 +145,44 @@ h2 {
   text-align: center;
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
+}
+
+/* Style 3 - hover effect for images */
+figure, 
+.video-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure:hover, 
+.video-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(46, 16, 71, 0.12); 
+}
+
+/* Style 4 - figures for images */
+figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  color: #5b4c65;
+  font-size: 0.85rem; 
+  margin-top: 0.6rem;
+}
+
+figure { 
+  margin: 1.75rem 0; 
+}
+
+/* Style 5 - Better lettering and dividers for resume */
+h4 {
+  font-size: 1.2rem;
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  color: #2e1047;
+  border-bottom: 2px solid #fde68a;
+  padding-bottom: 0.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
