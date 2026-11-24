@@ -21,8 +21,6 @@ body {
   line-height: 1.5;
 }
 
-
-
 h1, h2, h3 {
   color: #2e1047;
 }
@@ -37,9 +35,6 @@ h1, h2, h3 {
 }
 
 /* nav bar */
-.pnav {
-  background: #4c1d95;
-}
 .pnav {
   background: #4c1d95;
 }
@@ -65,7 +60,6 @@ h1, h2, h3 {
   transition: background-color 0.2s ease;
 }
 
-
 .pnav a:hover,
 .pnav a[aria-current="page"] {
   background: #2e1047;
@@ -79,22 +73,6 @@ h3 {
 
 a:hover {
   color: #094b5e;
-}
-
-.pnav ul {
-  max-width: 66rem;
-  margin: 0 auto;
-  padding: 0.4rem 0.5rem;
-  list-style: none;
-  text-align: center;
-}
-
-.pnav a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.95rem; 
-  display: inline-block;
 }
 
 h2 {
