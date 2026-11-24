@@ -37,14 +37,12 @@
                 mapTypeId: "roadmap"
             });
 
-            // Feature 1: Marker at IIT Mies Campus
             var marker = new google.maps.Marker({
                 position: campus,
                 map: map,
                 title: "Illinois Tech - Mies Campus"
             });
 
-            // Feature 2: InfoWindow opened when clicking the marker
             var info = new google.maps.InfoWindow({
                 content: "<p><strong>Illinois Tech</strong><br>Mies Campus, Chicago, IL</p>"
             });
@@ -53,7 +51,6 @@
                 info.open(map, marker);
             });
 
-            // Feature 3: Center map back to campus when clicking inside the map
             map.addListener("dblclick", function () {
                 map.panTo(campus);
                 map.setZoom(16);
