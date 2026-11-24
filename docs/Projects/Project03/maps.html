@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <nav class="pnav">
+            <ul>
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="page-3.html">Sketchbook</a></li>
+                <li><a href="map.html" aria-current="page">Map</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="carea" class="lcont">
+        <h1>Map</h1>
+        <p>Illinois Institute of Technology Mies Campus area in Chicago.</p>
+
+        <div id="gmap" style="width:100%;height:400px;"></div>
+
+        <p>
+            <button type="button" id="qbtn">Questions</button>
+        </p>
+    </main>
+
+    <script>
+        function initMap() {
+            var campus = { lat: 41.8349, lng: -87.6270 };
+            var map = new google.maps.Map(document.getElementById("gmap"), {
+                center: campus,
+                zoom: 16,
+                mapTypeId: "roadmap"
+            });
+
+            // Feature 1: Marker at IIT Mies Campus
+            var marker = new google.maps.Marker({
+                position: campus,
+                map: map,
+                title: "Illinois Tech - Mies Campus"
+            });
+
+            // Feature 2: InfoWindow opened when clicking the marker
+            var info = new google.maps.InfoWindow({
+                content: "<p><strong>Illinois Tech</strong><br>Mies Campus, Chicago, IL</p>"
+            });
+
+            marker.addListener("click", function () {
+                info.open(map, marker);
+            });
+
+            // Feature 3: Center map back to campus when clicking inside the map
+            map.addListener("dblclick", function () {
+                map.panTo(campus);
+                map.setZoom(16);
+            });
+        }
+
+        document.getElementById("qbtn").addEventListener("click", function () {
+            alert("If you have questions, contact me at:\nyour-email@example.com");
+        });
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM1F-BpX660SBK3-Vw9O9f7AEvTAIH8rI&callback=initMap" async defer></script>
+</body>
+</html>
